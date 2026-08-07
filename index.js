@@ -14,7 +14,6 @@ const allowedOrigins = (process.env.CLIENT_URL || 'http://localhost:5173').split
 app.use(cors({ origin: allowedOrigins, credentials: true }));
 app.use(express.json());
 
-// const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.mongodb.net/?retryWrites=true&w=majority`;
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.psactc0.mongodb.net/?appName=Cluster0`;
 
 const client = new MongoClient(uri, {
